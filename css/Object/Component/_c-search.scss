@@ -1,0 +1,17 @@
+.c-search{
+    &__box{
+        border-radius:10px;
+        width:396px;
+        height:46px;
+        position: absolute;
+    }
+    &__icon{
+        position: relative;
+        top:11px;
+        left: 12px;
+        font-size: 2rem !important;
+    }
+    &__button{
+        font-size: 1.6rem;
+    }
+}

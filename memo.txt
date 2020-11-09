@@ -1,0 +1,7 @@
+Front-page
+
+height:2993px
+width:1920px
+	header:217px
+	footer:150px
+
