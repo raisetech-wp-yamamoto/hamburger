@@ -1,4 +1,5 @@
 .c-front-page-card{
+    overflow: hidden;
     background-size: cover;
     width: 40%;
     height: 82%;
@@ -11,9 +12,18 @@
     }
     &__explanation{
         width: 94%;
-        height: 15%;
+        height: auto;
         margin:auto;
+        margin-bottom: 3%;
         color:#3C2A10;
         background-color: rgba(255,255,255, 0.8);
+        h3{
+            padding:3%;
+            font-size: 2.4rem;
+        }
+        p{
+            padding:3%;
+            font-size: 1.6rem;
+        }
     }
 }

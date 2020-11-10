@@ -101,7 +101,7 @@ input, select {
 }
 
 body {
-  font-family: 'M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -149,6 +149,13 @@ body {
   width: 19%;
 }
 
+.l-footer {
+  height: 150px;
+  background-color: #9D8670;
+  color: white;
+  text-align: center;
+}
+
 .c-title {
   font-family: 'Roboto', sans-serif;
 }
@@ -163,6 +170,7 @@ body {
 }
 
 .c-title--front-page-card {
+  white-space: nowrap;
   color: white;
   font-size: 8rem;
 }
@@ -205,7 +213,14 @@ body {
   color: white;
 }
 
+.c-map {
+  height: 50%;
+  background-size: cover;
+  background-image: url(../image/map.png);
+}
+
 .c-front-page-card {
+  overflow: hidden;
   background-size: cover;
   width: 40%;
   height: 82%;
@@ -222,10 +237,21 @@ body {
 
 .c-front-page-card__explanation {
   width: 94%;
-  height: 15%;
+  height: auto;
   margin: auto;
+  margin-bottom: 3%;
   color: #3C2A10;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.c-front-page-card__explanation h3 {
+  padding: 3%;
+  font-size: 2.4rem;
+}
+
+.c-front-page-card__explanation p {
+  padding: 3%;
+  font-size: 1.6rem;
 }
 
 .p-main-visual--front-page {
