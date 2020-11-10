@@ -2,4 +2,16 @@
     height: 50%;
     background-size: cover;
     background-image: url(../image/map.png);
+    background-color: rgba(0,0,0,0.6);
+    &__explanation{
+        color: white;
+        u{
+            display: block;
+            padding-bottom: 3%;
+        }
+        background-color: rgba(0,0,0,0.3);
+        padding:3%;
+        width: 61%;
+        height: 100%;
+    }
 }

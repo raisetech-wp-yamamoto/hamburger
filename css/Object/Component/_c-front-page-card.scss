@@ -2,7 +2,10 @@
     overflow: hidden;
     background-size: cover;
     width: 40%;
-    height: 82%;
+    u{
+        padding-bottom: 50%;
+        display: block;
+    }
     &--card1{
         background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
         margin-right: 5%;

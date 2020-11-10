@@ -111,7 +111,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 217px;
+  height: 150px;
   background-color: #FFF7EF;
   width: 81%;
 }
@@ -133,7 +133,7 @@ body {
 }
 
 .l-main__front-page-contents {
-  height: 55%;
+  padding: 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +150,7 @@ body {
 }
 
 .l-footer {
-  height: 150px;
+  height: 100px;
   background-color: #9D8670;
   color: white;
   text-align: center;
@@ -173,6 +173,7 @@ body {
   white-space: nowrap;
   color: white;
   font-size: 8rem;
+  padding: 5%;
 }
 
 .c-search {
@@ -183,8 +184,8 @@ body {
 
 .c-search__box {
   border-radius: 10px;
-  width: 396px;
-  height: 46px;
+  width: 300px;
+  height: 40px;
   border: 1px solid #707070;
   padding-left: 48px;
   font-size: 1.6rem;
@@ -193,15 +194,15 @@ body {
 
 .c-search__icon {
   position: absolute;
-  top: 11px;
+  top: 8px;
   left: 12px;
   font-size: 2.5rem !important;
 }
 
 .c-search__button {
   margin-left: 14px;
-  width: 136px;
-  height: 46px;
+  width: 100px;
+  height: 40px;
   background-color: #F2EDE9;
   border: 1px solid #707070;
   border-radius: 10px;
@@ -217,13 +218,31 @@ body {
   height: 50%;
   background-size: cover;
   background-image: url(../image/map.png);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.c-map__explanation {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 3%;
+  width: 61%;
+  height: 100%;
+}
+
+.c-map__explanation u {
+  display: block;
+  padding-bottom: 3%;
 }
 
 .c-front-page-card {
   overflow: hidden;
   background-size: cover;
   width: 40%;
-  height: 82%;
+}
+
+.c-front-page-card u {
+  padding-bottom: 50%;
+  display: block;
 }
 
 .c-front-page-card--card1 {
