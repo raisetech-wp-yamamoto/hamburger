@@ -1,0 +1,9 @@
+.l-main{
+    width:81%;
+    &__front-page-contents{
+        height: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

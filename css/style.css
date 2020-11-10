@@ -101,7 +101,7 @@ input, select {
 }
 
 body {
-  font-family: 'M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -113,6 +113,7 @@ body {
           align-items: center;
   height: 217px;
   background-color: #FFF7EF;
+  width: 81%;
 }
 
 .l-header .c-title {
@@ -124,16 +125,46 @@ body {
 }
 
 .l-wrapper {
-  width: 1553px;
+  max-width: 1920px;
+}
+
+.l-main {
+  width: 81%;
+}
+
+.l-main__front-page-contents {
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.l-sidebar {
+  width: 19%;
 }
 
 .c-title {
   font-family: 'Roboto', sans-serif;
-  color: #707070;
 }
 
 .c-title--header {
+  color: #707070;
   font-size: 6.4rem;
+}
+
+.c-title--side-menu {
+  color: #707070;
+}
+
+.c-title--front-page-card {
+  color: white;
+  font-size: 8rem;
 }
 
 .c-search {
@@ -149,6 +180,7 @@ body {
   border: 1px solid #707070;
   padding-left: 48px;
   font-size: 1.6rem;
+  outline: none;
 }
 
 .c-search__icon {
@@ -166,5 +198,50 @@ body {
   border: 1px solid #707070;
   border-radius: 10px;
   font-size: 1.6rem;
+  outline: none;
+}
+
+.c-sub-title {
+  color: white;
+}
+
+.c-front-page-card {
+  background-size: cover;
+  width: 40%;
+  height: 82%;
+}
+
+.c-front-page-card--card1 {
+  background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+  margin-right: 5%;
+}
+
+.c-front-page-card--card2 {
+  background-image: url(../image/473d814b175bd517b56eb309f2958725.png);
+}
+
+.c-front-page-card__explanation {
+  width: 94%;
+  height: 15%;
+  margin: auto;
+  color: #3C2A10;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.p-main-visual--front-page {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../image/3ba5a44414bb3c0885c27ff614596431.png);
+  background-size: cover;
+}
+
+.p-main-visual--front-page .c-sub-title {
+  padding-left: 5%;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
