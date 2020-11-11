@@ -108,7 +108,7 @@ input, select {
 }
 
 body {
-  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -120,7 +120,6 @@ body {
           align-items: center;
   height: 150px;
   background-color: #FFF7EF;
-  width: 81%;
 }
 
 .l-header .c-title {
@@ -133,10 +132,17 @@ body {
 
 .l-wrapper {
   max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.l-main {
+.l-wrapper__left {
   width: 81%;
+}
+
+.l-wrapper__right {
+  width: 19%;
 }
 
 .l-main__front-page-contents {
@@ -153,10 +159,13 @@ body {
 }
 
 .l-sidebar {
-  width: 19%;
+  padding: 15%;
+  background-color: #F2EDE9;
+  height: 100%;
 }
 
 .l-footer {
+  max-width: 1920px;
   height: 100px;
   background-color: #9D8670;
   color: white;
@@ -189,6 +198,8 @@ body {
 
 .c-title--side-menu {
   color: #707070;
+  font-size: 3.4rem;
+  margin-bottom: 30%;
 }
 
 .c-title--front-page-card {
@@ -196,6 +207,17 @@ body {
   color: white;
   font-size: 8rem;
   padding: 5%;
+}
+
+.c-menu dt {
+  font-size: 2.4rem;
+  margin: 4rem 0;
+}
+
+.c-menu dd {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
 }
 
 .c-search {
