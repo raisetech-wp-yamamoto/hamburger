@@ -8,3 +8,15 @@
         width:19%;
     }
 }
+
+@include mq(md){
+    .l-wrapper{
+        &__left{
+            width:100%;
+        }
+        &__right{
+            display: none;
+        }
+    }
+       
+}

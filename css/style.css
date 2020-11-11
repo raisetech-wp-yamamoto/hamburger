@@ -145,6 +145,15 @@ body {
   width: 19%;
 }
 
+@media screen and (max-width: 1030px) {
+  .l-wrapper__left {
+    width: 100%;
+  }
+  .l-wrapper__right {
+    display: none;
+  }
+}
+
 .l-main__front-page-contents {
   padding: 5% 0;
   display: -webkit-box;
