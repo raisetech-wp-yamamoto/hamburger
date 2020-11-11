@@ -100,3 +100,9 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

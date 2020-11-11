@@ -1,12 +1,14 @@
 .p-main-visual{
+    display: flex;
+    align-items: center;
+    .c-sub-title{
+        padding-left: 5%;
+    }
     &--front-page{
-        height: 20%;
-        display: flex;
-        align-items: center;
+        padding: 15% 0;
         background-image: url(../image/3ba5a44414bb3c0885c27ff614596431.png);
         background-size: cover;
         .c-sub-title{
-            padding-left: 5%;
             font-size: 4rem;
         }
     }

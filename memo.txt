@@ -13,3 +13,29 @@ width:1920px
 	sidebar:367px;
 
 
+学習メモ
+
+hrタグで線引く場合、
+上下に空白を与える場合はmarginで指定する。
+paddingでやろうとすると線の下に上下分のpaddingが与えられてしまうみたい。
+また、線の太さはheightで指定できるらしい
+→けど、height指定しても変わらなかった。
+border-widthプロパティでピクセルを指定したら太さが変わった。
+            border-width: 2px;
+            border-color: white;
+
+
+多分、reset.cssでhrタグに対してこのような設定がされているから？かもしれないけど
+いまいちよくわかってない
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+

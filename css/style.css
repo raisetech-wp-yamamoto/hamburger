@@ -100,8 +100,15 @@ input, select {
   vertical-align: middle;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: 'M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -154,6 +161,21 @@ body {
   background-color: #9D8670;
   color: white;
   text-align: center;
+}
+
+.l-footer small {
+  position: relative;
+  top: 20px;
+}
+
+.l-footer__sitemap {
+  padding-top: 30px;
+  font-size: 1.6rem;
+}
+
+.l-footer__sitemap a {
+  text-decoration: none;
+  color: white;
 }
 
 .c-title {
@@ -215,23 +237,43 @@ body {
 }
 
 .c-map {
-  height: 50%;
-  background-size: cover;
-  background-image: url(../image/map.png);
-  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background-color: #000;
+}
+
+.c-map .c-map__image {
+  position: relative;
+}
+
+.c-map .c-map__image img {
+  width: 100%;
 }
 
 .c-map__explanation {
+  position: absolute;
+  top: 0;
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 3%;
   width: 61%;
   height: 100%;
+  padding: 3%;
 }
 
-.c-map__explanation u {
-  display: block;
-  padding-bottom: 3%;
+.c-map__explanation h2 {
+  font-weight: normal;
+  font-size: 3.6rem;
+}
+
+.c-map__explanation hr {
+  width: 7.5rem;
+  border-width: 2px;
+  border-color: white;
+  margin: 5% 0;
+}
+
+.c-map__explanation p {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 .c-front-page-card {
@@ -240,9 +282,12 @@ body {
   width: 40%;
 }
 
-.c-front-page-card u {
+.c-front-page-card hr {
   padding-bottom: 50%;
-  display: block;
+  border-width: 4px;
+  border-color: white;
+  width: 6.3rem;
+  margin-left: 5%;
 }
 
 .c-front-page-card--card1 {
@@ -256,7 +301,6 @@ body {
 
 .c-front-page-card__explanation {
   width: 94%;
-  height: auto;
   margin: auto;
   margin-bottom: 3%;
   color: #3C2A10;
@@ -271,22 +315,29 @@ body {
 .c-front-page-card__explanation p {
   padding: 3%;
   font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
-.p-main-visual--front-page {
-  height: 20%;
+.p-main-visual {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.p-main-visual .c-sub-title {
+  padding-left: 5%;
+}
+
+.p-main-visual--front-page {
+  padding: 15% 0;
   background-image: url(../image/3ba5a44414bb3c0885c27ff614596431.png);
   background-size: cover;
 }
 
 .p-main-visual--front-page .c-sub-title {
-  padding-left: 5%;
   font-size: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
