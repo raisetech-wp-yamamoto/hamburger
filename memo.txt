@@ -15,7 +15,7 @@ width:1920px
 
 学習メモ
 
-hrタグで線引く場合、
+・hrタグで線引く場合、
 上下に空白を与える場合はmarginで指定する。
 paddingでやろうとすると線の下に上下分のpaddingが与えられてしまうみたい。
 また、線の太さはheightで指定できるらしい
@@ -36,6 +36,19 @@ hr {
     padding: 0;
 }
 
+・Webフォントが当たらない
+課題のXDではフォントに M+ 1mが指定されていた。
 
+ぐぐるとここ
+https://mplus-fonts.osdn.jp/about.html
 
+で、
+headでWebフォント読み込んでcssで下記を指定
+body {
+    font-family:
+    'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular',
+    'M+ Type-1 (general-j) Regular', sans-serif
+}
+
+これだと
 
