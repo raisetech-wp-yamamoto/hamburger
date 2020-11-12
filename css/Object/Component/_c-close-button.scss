@@ -1,0 +1,14 @@
+.c-close-button{
+    font-size: 3rem;
+    font-weight: normal;
+    display:none;
+}
+
+@include mq(md){
+    .c-close-button{
+        display:block;
+        position: absolute;
+        right: 10%;
+        top:2%;
+    }
+}

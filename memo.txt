@@ -36,19 +36,61 @@ hr {
     padding: 0;
 }
 
-・Webフォントが当たらない
-課題のXDではフォントに M+ 1mが指定されていた。
-
-ぐぐるとここ
+・【質問内容】
+XDデータで指定されているフォント「M+ 1m」を使いたいのですが、
+ブラウザで表示すると「M+ 1c regular」でレンダリングされてしまいます。
+・これはHTMLまたはCSSの記述が間違っているからでしょうか？
+・そもそも日本語の「M+ 1m」フォントというのはWebフォントで指定できるのでしょうか？
+・また、公式ではないところ？でWebフォントで配布しているのを見つけたのですが
+　これを使用しても問題ないのでしょうか？
+　http://mplus-webfonts.osdn.jp/
+【現状のコードや問題箇所の状態】
+画像を添付いたします。
+1枚目：XDデータに乗っているフォント
+2枚目：該当部分を指定したときのDevツールの表示
+3枚目：HTMLファイル:WebフォントCDN読み込み部分の記述
+4枚目：CSSファイル :font-familyを指定している部分
+Github：
+https://github.com/raisetech-wp-yamamoto/hamburger
+（アカウント名はそのうち変更しようと思っています・・・。）
+【試してみたこと・調べた内容】
+M+フォントの公式ページを参考に上記記述を書きました。
 https://mplus-fonts.osdn.jp/about.html
+Webフォントは以下の2つを読み込めば良いようで、
+https://mplus-fonts.osdn.jp/webfonts/basic_latin/mplus_webfonts.css
+https://mplus-fonts.osdn.jp/webfonts/general-j/mplus_webfonts.css
+general-j配下が日本語に対応している部分のようでしたが、
+general-jのCSSの中に「M+ 1m」に該当しそうなものが見当たりません。
+その為、basic_latin内の「M+ M Type-1 (basic latin) Regular」を一番に指定しましたがうまくいきませんでした。
+ちなみにCSSでの指定を
+font-family:'M+ Type-1 (general-j) Regular', sans-serif;
+にしてみても結果は同じでした。
+なので何れにせよ「M+ 1c regular」はM+ Type-1 (general-j) Regularに含まれているのかな？と思っています。
 
-で、
-headでWebフォント読み込んでcssで下記を指定
-body {
-    font-family:
-    'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular',
-    'M+ Type-1 (general-j) Regular', sans-serif
-}
 
-これだと
+【回答】
+公式で共有しているcssですが、どうもMIMEがcssと認識されてないかもですねー。
+font-faceを自ら書いて自分のcssに入れないと駄目かもです。
+http://mplus-webfonts.osdn.jp/
 
+
+
+yamamoto(WP2020年9月)  7時間前
+@ミズモト
+ご対応ありがとうございます。
+公式のCSSからこのフォントをCDNで読み込むのは難しそうなんですね。。
+font-face？をかくなり、別の配布サイトからもってくるなり、別の方法を試してみます。
+それでもうまくいかなければまた質問させていただきます。
+アドバイスいただきありがとうございました。
+
+
+ミズモト:alexa:  7時間前
+そういえば今更なんですが、たしか近いフォントがGoogleFontにあるんでそれでもいいですよみたいなことを聞いたことがあるので、Slack調べてみられるといいかもしれないです！
+
+
+
+【】
+$('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
+//元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。
+
+↑これでサイドバーのスライドインを実装したけど、margin与えた分の幅が消える理由が分からない。

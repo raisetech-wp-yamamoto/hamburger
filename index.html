@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://mplus-webfonts.sourceforge.jp/mplus_webfonts.css">
     <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
     <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
     <title>Front-page</title>
@@ -12,7 +13,7 @@
     <div class="l-wrapper">
         <div class="l-wrapper__left">
             <header class="l-header">
-                <h2 class="c-title c-title--side-menu">Menu</h2>
+                <h2 id="menu" class="c-title c-title--side-menu">Menu</h2>
                 <h1 class="c-title c-title--header">Hamburger</h1>
                 <div class="c-search">
                     <input type="text" class="c-search__box">
@@ -62,9 +63,10 @@
                 </div>
             </div>
         </div>
-        <div class="l-wrapper__right">
+        <div class="l-wrapper__right off">
             <aside class="l-sidebar">
                 <h2 class="c-title c-title--side-menu">Menu</h2>
+                <h2 id="menu-close" class="c-close-button">×</h2>
                 <dl class="c-menu">
                     <dt>バーガー</dt>
                     <dd>ハンバーガー</dd>
@@ -100,5 +102,7 @@
         </div>
         <small>Copyright: RaiseTech</small>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -109,7 +109,7 @@ input, select {
 }
 
 body {
-  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -158,7 +158,7 @@ body {
   }
   .l-header .c-title--side-menu {
     display: block;
-    /*ヘッダー内のMenuはlgでは表示しない*/
+    /*ヘッダー内のMenuはmdでは表示する*/
   }
   .l-header .c-search {
     margin-right: 0;
@@ -184,11 +184,19 @@ body {
 }
 
 @media screen and (max-width: 1030px) {
+  .l-wrapper {
+    position: relative;
+  }
   .l-wrapper__left {
     width: 100%;
   }
   .l-wrapper__right {
     display: none;
+    width: 30%;
+    position: absolute;
+    height: calc(100% + 100px);
+    /*フッターまで貫通してメニューを出すから+100px*/
+    right: -30%;
   }
 }
 
@@ -209,6 +217,12 @@ body {
   padding: 15%;
   background-color: #F2EDE9;
   height: 100%;
+}
+
+@media screen and (max-width: 1030px) {
+  .l-sidebar .c-title--side-menu {
+    visibility: hidden;
+  }
 }
 
 .l-footer {
@@ -259,6 +273,21 @@ body {
 @media screen and (max-width: 1030px) {
   .c-title--header {
     font-size: 4rem;
+  }
+}
+
+.c-close-button {
+  font-size: 3rem;
+  font-weight: normal;
+  display: none;
+}
+
+@media screen and (max-width: 1030px) {
+  .c-close-button {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 2%;
   }
 }
 

@@ -25,7 +25,7 @@
         .c-title{
             margin-left: 0;/*タイトルの左にあけた空間(1.9%)を解除*/
             &--side-menu{
-                display: block;/*ヘッダー内のMenuはlgでは表示しない*/
+                display: block;/*ヘッダー内のMenuはmdでは表示する*/
             }
         }
         .c-search{
