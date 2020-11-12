@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -108,7 +109,7 @@ input, select {
 }
 
 body {
-  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 .l-header {
@@ -118,7 +119,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 150px;
+  height: 200px;
   background-color: #FFF7EF;
 }
 
@@ -126,8 +127,45 @@ body {
   margin-left: 4.2%;
 }
 
+.l-header .c-title--side-menu {
+  display: none;
+  /*ヘッダー内のMenuはlgでは表示しない*/
+  position: absolute;
+  margin-bottom: 0;
+  /*サイドメニュー上に表示してた時のmarginを解除*/
+  right: 3%;
+  top: 2%;
+}
+
 .l-header .c-search {
   margin-right: 1.9%;
+}
+
+@media screen and (max-width: 1030px) {
+  .l-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    /*flex要素を縦に並べる*/
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    /*両端空白有り縦方向均等並べ*/
+  }
+  .l-header .c-title {
+    margin-left: 0;
+    /*タイトルの左にあけた空間(1.9%)を解除*/
+  }
+  .l-header .c-title--side-menu {
+    display: block;
+    /*ヘッダー内のMenuはlgでは表示しない*/
+  }
+  .l-header .c-search {
+    margin-right: 0;
+    /*検索ボックスとボタンの右端にあけた空間(1.9%)を解除*/
+    margin-left: 0;
+    /*検索ボックスとボタンの右端寄せを解除*/
+  }
 }
 
 .l-wrapper {
@@ -218,6 +256,12 @@ body {
   padding: 5%;
 }
 
+@media screen and (max-width: 1030px) {
+  .c-title--header {
+    font-size: 4rem;
+  }
+}
+
 .c-menu dt {
   font-size: 2.4rem;
   margin: 4rem 0;
@@ -305,6 +349,12 @@ body {
 .c-map__explanation p {
   font-size: 1.6rem;
   line-height: 2.1rem;
+}
+
+@media screen and (max-width: 1030px) {
+  .c-map__explanation {
+    width: 100%;
+  }
 }
 
 .c-front-page-card {

@@ -16,3 +16,11 @@
         padding:5%;
     }
 }
+
+@include mq(md){
+    .c-title{
+        &--header{
+            font-size: 4rem;
+        }
+    }
+}

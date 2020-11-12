@@ -32,3 +32,12 @@
         }
     }
 }
+
+@include mq(md){
+    .c-map{
+        &__explanation{
+            width: 100%;
+        }
+    }
+    
+}
