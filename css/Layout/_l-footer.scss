@@ -4,12 +4,9 @@
     background-color: #9D8670;
     color: white;
     text-align: center;
-    small{
-        position: relative;
-        top:20px;
-    }
     &__sitemap{
         padding-top: 30px;
+        padding-bottom: 20px;
         font-size: 1.6rem;
         a {
             text-decoration: none;

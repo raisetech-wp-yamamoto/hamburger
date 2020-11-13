@@ -108,10 +108,22 @@ input, select {
           box-sizing: border-box;
 }
 
-body {
-  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+html {
+  overflow: auto;
 }
 
+body {
+  overflow: hidden;
+  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+}
+
+/*
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する為、
+
+htmlにoverflow:auto
+bodyにoverflow:hiddenを設定している
+
+*/
 .l-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,33 +140,36 @@ body {
 }
 
 .l-header .c-title--side-menu {
+  cursor: pointer;
   display: none;
   /*ヘッダー内のMenuはlgでは表示しない*/
   position: absolute;
   margin-bottom: 0;
   /*サイドメニュー上に表示してた時のmarginを解除*/
   right: 3%;
-  top: 2%;
+  top: 1%;
 }
 
 .l-header .c-search {
   margin-right: 1.9%;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .l-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
     /*flex要素を縦に並べる*/
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    /*両端空白有り縦方向均等並べ*/
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /*縦中央寄せ*/
   }
   .l-header .c-title {
     margin-left: 0;
     /*タイトルの左にあけた空間(1.9%)を解除*/
+    margin-bottom: 5%;
   }
   .l-header .c-title--side-menu {
     display: block;
@@ -165,6 +180,12 @@ body {
     /*検索ボックスとボタンの右端にあけた空間(1.9%)を解除*/
     margin-left: 0;
     /*検索ボックスとボタンの右端寄せを解除*/
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-header .c-title--side-menu {
+    font-size: 2rem;
   }
 }
 
@@ -183,7 +204,7 @@ body {
   width: 19%;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .l-wrapper {
     position: relative;
   }
@@ -192,11 +213,18 @@ body {
   }
   .l-wrapper__right {
     display: none;
-    width: 30%;
+    width: 40%;
     position: absolute;
     height: calc(100% + 100px);
     /*フッターまで貫通してメニューを出すから+100px*/
-    right: -30%;
+    right: -40%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-wrapper__right {
+    width: 90%;
+    right: -90%;
   }
 }
 
@@ -219,7 +247,7 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .l-sidebar .c-title--side-menu {
     visibility: hidden;
   }
@@ -233,13 +261,9 @@ body {
   text-align: center;
 }
 
-.l-footer small {
-  position: relative;
-  top: 20px;
-}
-
 .l-footer__sitemap {
   padding-top: 30px;
+  padding-bottom: 20px;
   font-size: 1.6rem;
 }
 
@@ -254,7 +278,7 @@ body {
 
 .c-title--header {
   color: #707070;
-  font-size: 6.4rem;
+  font-size: 5.5rem;
 }
 
 .c-title--side-menu {
@@ -270,19 +294,20 @@ body {
   padding: 5%;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .c-title--header {
     font-size: 4rem;
   }
 }
 
 .c-close-button {
+  cursor: pointer;
   font-size: 3rem;
   font-weight: normal;
   display: none;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .c-close-button {
     display: block;
     position: absolute;
@@ -310,7 +335,7 @@ body {
 
 .c-search__box {
   border-radius: 10px;
-  width: 300px;
+  width: 230px;
   height: 40px;
   border: 1px solid #707070;
   padding-left: 48px;
@@ -327,7 +352,7 @@ body {
 
 .c-search__button {
   margin-left: 14px;
-  width: 100px;
+  width: 80px;
   height: 40px;
   background-color: #F2EDE9;
   border: 1px solid #707070;
@@ -354,6 +379,7 @@ body {
 }
 
 .c-map__explanation {
+  overflow: auto;
   position: absolute;
   top: 0;
   color: white;
@@ -380,7 +406,7 @@ body {
   line-height: 2.1rem;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 834px) {
   .c-map__explanation {
     width: 100%;
   }

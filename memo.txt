@@ -88,9 +88,18 @@ font-face？をかくなり、別の配布サイトからもってくるなり�
 そういえば今更なんですが、たしか近いフォントがGoogleFontにあるんでそれでもいいですよみたいなことを聞いたことがあるので、Slack調べてみられるといいかもしれないです！
 
 
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する方法
+https://www.acky.info/tips/css/00031.html
 
-【】
+htmlにoverflow:autoを設定した上で
+bodyに対してoverflow:hiddenを設定する
+
+
+【疑問点】
 $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 //元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。
 
 ↑これでサイドバーのスライドインを実装したけど、margin与えた分の幅が消える理由が分からない。
+
+
+

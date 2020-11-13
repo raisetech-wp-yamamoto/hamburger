@@ -1,5 +1,17 @@
+html{
+    overflow: auto;
+}
 body {
+    overflow: hidden;
     font-family:
     'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular',
     'M+ Type-1 (general-j) Regular', sans-serif
 }
+
+/*
+右側にはみ出した部分まで横スクロールバーが表示される問題を解消する為、
+
+htmlにoverflow:auto
+bodyにoverflow:hiddenを設定している
+
+*/

@@ -9,6 +9,7 @@
     }
 
     &__explanation{
+        overflow: auto;
         position: absolute;
         top:0;
         color: white;

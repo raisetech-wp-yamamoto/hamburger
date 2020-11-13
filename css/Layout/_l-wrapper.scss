@@ -17,10 +17,20 @@
         }
         &__right{
             display: none;
-            width: 30%;
+            width: 40%;
             position: absolute;
             height: calc(100% + 100px);/*フッターまで貫通してメニューを出すから+100px*/
-            right: -30%;
+            right: -40%;
+        }
+    }
+       
+}
+
+@include mq(sm){
+    .l-wrapper{
+        &__right{
+            width: 90%;
+            right: -90%;
         }
     }
        
