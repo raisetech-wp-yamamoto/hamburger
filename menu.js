@@ -5,6 +5,7 @@ $(function(){
         if($('.l-wrapper__right').hasClass('off')){
             $('.l-wrapper__right').removeClass('off');
             $('.l-wrapper__right').css("display","block");//display:noneにしてあるメニュー部分を表示する
+            $('.l-bg').css("visibility","visible");//display:noneにしてあるメニュー以外を暗くする部分を表示する
             if(windowWidth > 375){
                 $('.l-wrapper__right').animate({'margin-right':'40%'},300).addClass('on');//元々右側40%にずらして置いてあるので右側に40％marginを与えて画面上に表示する。
             } else {
@@ -16,6 +17,7 @@ $(function(){
             $('.l-wrapper__right').animate({'margin-right':'0'},300,function(){
                 $('.l-wrapper__right').css("display","none");
             });
+            $('.l-bg').css("visibility","hidden");//メニュー以外を暗くする部分を消す
         }
     });
     
@@ -28,6 +30,7 @@ $(function(){
             console.log("window size over 1030px");
             $('body *').removeAttr('style');
             $('.l-wrapper__right').addClass("off");
+            $('.l-bg').css("visibility","hidden");//メニュー以外を暗くする部分を消す
         }
     });
 

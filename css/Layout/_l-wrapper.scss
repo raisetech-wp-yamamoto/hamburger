@@ -1,4 +1,5 @@
 .l-wrapper{
+    position: relative;
     max-width:1920px;
     display: flex;
     &__left{
@@ -6,12 +7,12 @@
     }
     &__right{
         width:19%;
+        z-index: 200;
     }
 }
 
 @include mq(md){
     .l-wrapper{
-        position: relative;
         &__left{
             width:100%;
         }

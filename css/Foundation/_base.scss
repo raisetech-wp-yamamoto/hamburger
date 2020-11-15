@@ -1,10 +1,15 @@
+@font-face {
+    font-family: 'mplus-1m-regular';
+    src: url(../fonts/mplus-1m-regular.ttf);
+}
+
 html{
     overflow: auto;
 }
 body {
     overflow: hidden;
     font-family:
-    'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular',
+    'mplus-1m-regular','M+ C Type-1 (basic latin) Regular',
     'M+ Type-1 (general-j) Regular', sans-serif
 }
 

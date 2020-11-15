@@ -108,13 +108,18 @@ input, select {
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'mplus-1m-regular';
+  src: url(../fonts/mplus-1m-regular.ttf);
+}
+
 html {
   overflow: auto;
 }
 
 body {
   overflow: hidden;
-  font-family: 'M+ M Type-1 (basic latin) Regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 /*
@@ -124,6 +129,14 @@ htmlにoverflow:auto
 bodyにoverflow:hiddenを設定している
 
 */
+.l-bg {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 100px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
 .l-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +203,7 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-wrapper {
+  position: relative;
   max-width: 1920px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,12 +216,10 @@ bodyにoverflow:hiddenを設定している
 
 .l-wrapper__right {
   width: 19%;
+  z-index: 200;
 }
 
 @media screen and (max-width: 834px) {
-  .l-wrapper {
-    position: relative;
-  }
   .l-wrapper__left {
     width: 100%;
   }
@@ -229,7 +241,7 @@ bodyにoverflow:hiddenを設定している
 }
 
 .l-main__front-page-contents {
-  padding: 5% 0;
+  padding: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +251,12 @@ bodyにoverflow:hiddenを設定している
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 375px) {
+  .l-main__front-page-contents {
+    display: block;
+  }
 }
 
 .l-sidebar {
@@ -290,7 +308,7 @@ bodyにoverflow:hiddenを設定している
 .c-title--front-page-card {
   white-space: nowrap;
   color: white;
-  font-size: 8rem;
+  font-size: 6rem;
   padding: 5%;
 }
 
@@ -366,15 +384,17 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-map {
+  position: relative;
   overflow: hidden;
   background-color: #000;
 }
 
-.c-map .c-map__image {
-  position: relative;
+.c-map img {
+  width: 100%;
+  min-height: 200%;
 }
 
-.c-map .c-map__image img {
+.c-map__image img {
   width: 100%;
 }
 
@@ -391,7 +411,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-map__explanation h2 {
   font-weight: normal;
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 
 .c-map__explanation hr {
@@ -402,7 +422,7 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-map__explanation p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 2.1rem;
 }
 
@@ -415,11 +435,10 @@ bodyにoverflow:hiddenを設定している
 .c-front-page-card {
   overflow: hidden;
   background-size: cover;
-  width: 40%;
+  width: 50%;
 }
 
 .c-front-page-card hr {
-  padding-bottom: 50%;
   border-width: 4px;
   border-color: white;
   width: 6.3rem;
@@ -436,7 +455,7 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-front-page-card__explanation {
-  width: 94%;
+  width: 90%;
   margin: auto;
   margin-bottom: 3%;
   color: #3C2A10;
@@ -445,13 +464,23 @@ bodyにoverflow:hiddenを設定している
 
 .c-front-page-card__explanation h3 {
   padding: 3%;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .c-front-page-card__explanation p {
   padding: 3%;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 2.1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .c-front-page-card {
+    width: 100%;
+  }
+  .c-front-page-card--card1 {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
 }
 
 .p-main-visual {

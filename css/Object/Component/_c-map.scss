@@ -1,8 +1,12 @@
 .c-map{
+    position: relative;
     overflow: hidden;
     background-color: #000;
-    .c-map__image{
-        position: relative;
+    img{
+        width: 100%;
+        min-height: 200%;
+    }
+    &__image{
         img{
             width: 100%;
         }
@@ -19,7 +23,7 @@
         padding:3%;
         h2{
             font-weight:normal;
-            font-size: 3.6rem;
+            font-size: 3rem;
         }
         hr{
             width: 7.5rem;
@@ -28,7 +32,7 @@
             margin:5% 0;
         }
         p{
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             line-height: 2.1rem;
         }
     }
