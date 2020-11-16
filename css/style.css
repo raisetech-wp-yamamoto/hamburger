@@ -350,6 +350,39 @@ bodyにoverflow:hiddenを設定している
   margin-bottom: 3rem;
 }
 
+.c-page-description {
+  color: #3C2A10;
+  margin-bottom: 10%;
+}
+
+.c-page-description h2 {
+  font-size: 3.0rem;
+  margin-bottom: 2%;
+}
+
+.c-page-description p {
+  font-size: 1.6rem;
+}
+
+.c-archive-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3C2B1C;
+  color: white;
+  height: 470px;
+}
+
+.c-archive-page-card__img {
+  background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
+  background-size: cover;
+  width: 50%;
+}
+
+.c-archive-page-card__description {
+  width: 50%;
+}
+
 .c-search {
   margin-left: auto;
   color: #707070;

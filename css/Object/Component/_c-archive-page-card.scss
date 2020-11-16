@@ -1,0 +1,14 @@
+.c-archive-page-card{
+    display: flex;
+    background-color: #3C2B1C;
+    color: white;
+    height: 470px;  
+    &__img{
+        background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
+        background-size: cover;
+        width: 50%;
+    }
+    &__description{
+        width: 50%;
+    }
+}
