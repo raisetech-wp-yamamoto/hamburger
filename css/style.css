@@ -118,7 +118,6 @@ html {
 }
 
 body {
-  overflow: hidden;
   font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
@@ -227,8 +226,6 @@ bodyにoverflow:hiddenを設定している
     display: none;
     width: 40%;
     position: absolute;
-    height: calc(100% + 100px);
-    /*フッターまで貫通してメニューを出すから+100px*/
     right: -40%;
   }
 }
@@ -253,8 +250,16 @@ bodyにoverflow:hiddenを設定している
           justify-content: center;
 }
 
+.l-main__archive-page-contents {
+  background-color: #FFFDFA;
+  padding: 5%;
+}
+
 @media screen and (max-width: 375px) {
   .l-main__front-page-contents {
+    display: block;
+  }
+  .l-main__archive-page-contents {
     display: block;
   }
 }
@@ -504,5 +509,34 @@ bodyにoverflow:hiddenを設定している
 
 .p-main-visual--front-page .c-sub-title {
   font-size: 4rem;
+}
+
+.p-main-visual--archive-page {
+  padding: 5% 0;
+  background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+  background-position: center center;
+  width: 100%;
+  position: relative;
+}
+
+.p-main-visual--archive-page__bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-main-visual--archive-page .c-sub-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.p-main-visual--archive-page p {
+  z-index: 1;
+  color: white;
+  margin-left: 1%;
 }
 /*# sourceMappingURL=style.css.map */
