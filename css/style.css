@@ -121,6 +121,10 @@ body {
   font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
+body button:focus {
+  outline: 0;
+}
+
 /*
 右側にはみ出した部分まで横スクロールバーが表示される問題を解消する為、
 
@@ -323,6 +327,16 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
+.c-card-button {
+  display: block;
+  background-color: white;
+  color: #707070;
+  border-radius: 30px;
+  width: 50%;
+  height: 15%;
+  margin: auto;
+}
+
 .c-close-button {
   cursor: pointer;
   font-size: 3rem;
@@ -352,7 +366,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-page-description {
   color: #3C2A10;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .c-page-description h2 {
@@ -370,7 +384,8 @@ bodyにoverflow:hiddenを設定している
   display: flex;
   background-color: #3C2B1C;
   color: white;
-  height: 470px;
+  height: 450px;
+  margin-bottom: 2rem;
 }
 
 .c-archive-page-card__img {
@@ -381,6 +396,22 @@ bodyにoverflow:hiddenを設定している
 
 .c-archive-page-card__description {
   width: 50%;
+  padding: 5%;
+}
+
+.c-archive-page-card__description h3 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+}
+
+.c-archive-page-card__description h4 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.c-archive-page-card__description p {
+  font-size: 1.6rem;
+  margin-bottom: 20%;
 }
 
 .c-search {

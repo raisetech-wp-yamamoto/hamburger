@@ -2,7 +2,8 @@
     display: flex;
     background-color: #3C2B1C;
     color: white;
-    height: 470px;  
+    height: 450px;
+    margin-bottom: 2rem;
     &__img{
         background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
         background-size: cover;
@@ -10,5 +11,18 @@
     }
     &__description{
         width: 50%;
+        padding:5%;
+        h3{
+            font-size: 3.6rem;
+            margin-bottom: 5rem;
+        }
+        h4{
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+            margin-bottom: 20%;
+        }
     }
 }
