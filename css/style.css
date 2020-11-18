@@ -119,7 +119,7 @@ html {
 
 body {
   overflow: hidden;
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 /*
@@ -131,6 +131,7 @@ bodyにoverflow:hiddenを設定している
 */
 .l-bg {
   position: absolute;
+  visibility: hidden;
   width: 100%;
   height: calc(100% + 100px);
   background-color: rgba(0, 0, 0, 0.5);
