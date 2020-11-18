@@ -14,7 +14,7 @@ $(function(){
             }
         } else {
             $('.l-wrapper__right').addClass('off');
-            $('.l-wrapper__right').animate({'margin-right':'0'},300,function(){
+            $('.l-wrapper__right').animate({'margin-right':'0'},300,function(){//animate関数第3引数に関数を渡すと、第1,2引数の処理が終わった後で実行してくれる
                 $('.l-wrapper__right').css("display","none");
             });
             $('.l-bg').css("visibility","hidden");//メニュー以外を暗くする部分を消す

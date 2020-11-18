@@ -12,4 +12,29 @@
             font-size: 4rem;
         }
     }
+    &--archive-page{
+        padding: 5% 0;
+        background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+        background-position: center center;
+        width: 100%;
+        position: relative;
+        &__bg{
+            position: absolute;
+            background-color: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .c-sub-title{
+            font-family: 'Roboto', sans-serif;
+            font-size: 5rem;
+            z-index: 1;
+        }
+        p{
+            z-index: 1;
+            color: white;
+            margin-left: 1%;
+        }
+    }
 }

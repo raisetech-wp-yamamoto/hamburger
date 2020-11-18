@@ -118,8 +118,11 @@ html {
 }
 
 body {
-  overflow: hidden;
   font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+}
+
+body button:focus {
+  outline: 0;
 }
 
 /*
@@ -228,8 +231,6 @@ bodyにoverflow:hiddenを設定している
     display: none;
     width: 40%;
     position: absolute;
-    height: calc(100% + 100px);
-    /*フッターまで貫通してメニューを出すから+100px*/
     right: -40%;
   }
 }
@@ -254,8 +255,16 @@ bodyにoverflow:hiddenを設定している
           justify-content: center;
 }
 
+.l-main__archive-page-contents {
+  background-color: #FFFDFA;
+  padding: 5%;
+}
+
 @media screen and (max-width: 375px) {
   .l-main__front-page-contents {
+    display: block;
+  }
+  .l-main__archive-page-contents {
     display: block;
   }
 }
@@ -319,6 +328,16 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
+.c-card-button {
+  display: block;
+  background-color: white;
+  color: #707070;
+  border-radius: 30px;
+  width: 50%;
+  height: 15%;
+  margin: auto;
+}
+
 .c-close-button {
   cursor: pointer;
   font-size: 3rem;
@@ -344,6 +363,100 @@ bodyにoverflow:hiddenを設定している
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
+}
+
+.c-pagenation {
+  color: #707070;
+  text-align: center;
+  font-size: 0px;
+  margin-top: 5%;
+}
+
+.c-pagenation__current {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 0 5px;
+}
+
+.c-pagenation__prev {
+  font-size: 5rem;
+  margin: 0 5px;
+  vertical-align: -0.75rem;
+}
+
+.c-pagenation__num {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 1px solid #707070;
+  padding: 7px 13px;
+  background-color: white;
+  margin: 0 5px;
+}
+
+.c-pagenation__next {
+  font-size: 5rem;
+  margin: 0 5px;
+  vertical-align: -0.75rem;
+}
+
+.c-page-description {
+  color: #3C2A10;
+  margin-bottom: 5%;
+}
+
+.c-page-description h2 {
+  font-size: 3.0rem;
+  margin-bottom: 2%;
+}
+
+.c-page-description p {
+  font-size: 1.6rem;
+}
+
+.c-archive-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3C2B1C;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.c-archive-page-card__img {
+  background-image: url(../image/e3472c768077e90f47f5ca3c6ba0144e.png);
+  background-size: cover;
+  width: 50%;
+}
+
+.c-archive-page-card__description {
+  width: 60%;
+  padding: 5%;
+}
+
+.c-archive-page-card__description h3 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+}
+
+.c-archive-page-card__description h4 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.c-archive-page-card__description p {
+  font-size: 1.6rem;
+  margin-bottom: 20%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-archive-page-card__description h3 {
+    font-size: 2rem;
+  }
+  .c-archive-page-card__description h4 {
+    font-size: 1.6rem;
+  }
 }
 
 .c-search {
@@ -505,5 +618,34 @@ bodyにoverflow:hiddenを設定している
 
 .p-main-visual--front-page .c-sub-title {
   font-size: 4rem;
+}
+
+.p-main-visual--archive-page {
+  padding: 5% 0;
+  background-image: url(../image/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+  background-position: center center;
+  width: 100%;
+  position: relative;
+}
+
+.p-main-visual--archive-page__bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-main-visual--archive-page .c-sub-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.p-main-visual--archive-page p {
+  z-index: 1;
+  color: white;
+  margin-left: 1%;
 }
 /*# sourceMappingURL=style.css.map */

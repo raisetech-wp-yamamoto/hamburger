@@ -101,5 +101,6 @@ $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 
 ↑これでサイドバーのスライドインを実装したけど、margin与えた分の幅が消える理由が分からない。
 
-
+・user agent stylesheetってなんだ？
+buttonとかのStyleが、bodyに設定したCSSより優先して上書きされている？
 

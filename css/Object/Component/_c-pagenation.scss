@@ -1,0 +1,32 @@
+.c-pagenation{
+    color: #707070;
+    text-align: center;
+    font-size: 0px;//子要素にSpanタグが並び、HTML上で改行が入ると隙間が空く現象がある。それを解消する為の記述
+    margin-top: 5%;
+    &__current{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin: 0 5px;
+    }
+    &__prev{
+        font-size: 5rem;
+        margin: 0 5px;
+        vertical-align: -0.75rem;
+    }
+    &__num{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border:1px solid #707070 ;
+        padding:7px 13px;
+        background-color: white;
+        margin: 0 5px;
+    }
+    &__next{
+        font-size: 5rem;
+        margin: 0 5px;
+        vertical-align: -0.75rem;
+    }
+    
+}

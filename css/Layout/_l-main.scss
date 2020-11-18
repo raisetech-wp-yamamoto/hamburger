@@ -5,11 +5,18 @@
         align-items: center;
         justify-content: center;
     }
+    &__archive-page-contents{
+        background-color: #FFFDFA;
+        padding:5%;
+    }
 }
 
 @include mq(sm){
     .l-main{
         &__front-page-contents{
+            display: block;
+        }
+        &__archive-page-contents{
             display: block;
         }
     }
