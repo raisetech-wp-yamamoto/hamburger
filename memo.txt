@@ -95,6 +95,11 @@ htmlにoverflow:autoを設定した上で
 bodyに対してoverflow:hiddenを設定する
 
 
+
+・iOS Safariでスクロールしただけでリサイズイベントが発生する原因と対処法
+https://qiita.com/tonkotsuboy_com/items/d32ec6e7a1f6f592d415
+
+
 【疑問点】
 $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 //元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。
@@ -104,3 +109,22 @@ $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 ・user agent stylesheetってなんだ？
 buttonとかのStyleが、bodyに設定したCSSより優先して上書きされている？
 
+
+・アーカイブページのカード内ボタンに対して
+　Height15%を設定してウィンドウ幅を縮めると、
+　親要素のHeightがボタンの高さに応じて大きくなってくれず、
+　ボタンが親要素をはみ出してしまう。（茶色い部分）
+　Heightを指定せず、paddingでボタン要素を膨らませると
+　はみ出さずに親要素の高さも一緒に大きくなってくれる。
+　なんでこうなるの？
+
+.c-card-button {
+    display: block;
+    background-color: white;
+    color: #707070;
+    border-radius: 30px;
+    width: 50%;
+    height: 15%;
+    margin: auto;
+    padding: 10%;
+}

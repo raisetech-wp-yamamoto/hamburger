@@ -22,9 +22,13 @@ $(function(){
     });
     
     var $win = $(window);
-
+    var currentWidth = window.innerWidth;
     $win.on('load resize', function() {
         var windowWidth = window.innerWidth;
+        if(currentWidth == windowWidth){
+            return;//横幅が変わってなかったら何もしない（Safari対策：スマホでスクロールしただけでresizeイベントが走ってしまう為）
+        }
+        currentWidth = windowWidth;//現在のサイズをcurrentWidthに記憶しとく
         //375より大きくなったら上のjQueryによってelementに勝手についたstyleを消す。（display:noneとか）
         if (windowWidth > 375) {
             console.log("window size over 1030px");

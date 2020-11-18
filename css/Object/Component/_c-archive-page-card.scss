@@ -9,7 +9,7 @@
         width: 50%;
     }
     &__description{
-        width: 60%;
+        width: 50%;
         padding:5%;
         h3{
             font-size: 3.6rem;
@@ -22,6 +22,7 @@
         p{
             font-size: 1.6rem;
             margin-bottom: 20%;
+            line-height: 2.1rem;
         }
     }
 }
@@ -36,6 +37,20 @@
             h4{
                 font-size: 1.6rem;
             }
+        }
+    }
+}
+
+@include mq(sm){
+    .c-archive-page-card{
+        display: block;
+        &__img{
+            width: 100%;
+            height: 230px;
+        }
+        &__description{
+            width: 100%;
+            height: 350px;
         }
     }
 }
