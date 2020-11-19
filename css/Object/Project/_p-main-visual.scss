@@ -37,4 +37,13 @@
             margin-left: 1%;
         }
     }
+    &--single-page{
+        padding: 15% 0;
+        background-image: url(../image/ham-burger-with-vegetables-1639557.png);
+        background-size: cover;
+        background-position: center;
+        .c-sub-title{
+            font-size: 4rem;
+        }
+    }
 }

@@ -9,6 +9,10 @@
         background-color: #FFFDFA;
         padding:5%;
     }
+    &__single-page-contents{
+        background-color: #FFFDFA;
+        padding:5%;
+    }
 }
 
 @include mq(sm){
