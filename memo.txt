@@ -100,6 +100,12 @@ bodyに対してoverflow:hiddenを設定する
 https://qiita.com/tonkotsuboy_com/items/d32ec6e7a1f6f592d415
 
 
+・背景画像の表示位置を指定するプロパティ
+　background-positioin:
+　真ん中ならcenter
+
+
+
 【疑問点】
 $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');
 //元々右側30%にずらして置いてあるので右側に30％marginを与えて画面上に表示する。

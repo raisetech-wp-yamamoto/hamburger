@@ -269,6 +269,41 @@ bodyにoverflow:hiddenを設定している
 .l-main__single-page-contents {
   background-color: #FFFDFA;
   padding: 5%;
+  color: #3C2A10;
+}
+
+.l-main__single-page-contents p {
+  font-size: 1.6rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h2 {
+  font-size: 3.6rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h3 {
+  font-size: 2.8rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h4 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h5 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents h6 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.l-main__single-page-contents .c-blockquote {
+  margin-bottom: 5%;
 }
 
 @media screen and (max-width: 375px) {
@@ -351,7 +386,7 @@ bodyにoverflow:hiddenを設定している
   display: block;
   background-color: white;
   color: #707070;
-  border-radius: 30px;
+  border-radius: 40px;
   width: 60%;
   padding: 5%;
   margin: auto;
@@ -382,6 +417,11 @@ bodyにoverflow:hiddenを設定している
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
+}
+
+.c-blockquote {
+  background-color: #F5F5F5;
+  padding: 5%;
 }
 
 .c-pagenation {
