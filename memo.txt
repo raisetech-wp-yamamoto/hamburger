@@ -105,6 +105,14 @@ https://qiita.com/tonkotsuboy_com/items/d32ec6e7a1f6f592d415
 　真ん中ならcenter
 
 
+・nth-childを使う時の注意点
+https://learning.ccc-labo.net/2015/12/nth-child/
+nth-childがうまくいかない、と思っている人へ。（過去の自分を含む）
+投稿者:管理人 2015年12月10日 nth-childがうまくいかない、と思っている人へ。（過去の自分を含む）にコメント
+あなたがやりたいことは実は、「nth-of-type」こっち、かもしれません。
+
+nth-childは該当する要素だけを数えてくれるわけじゃない
+
 
 【疑問点】
 $('.l-wrapper__right').animate({'margin-right':'30%'},300).addClass('on');

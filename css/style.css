@@ -272,7 +272,7 @@ bodyにoverflow:hiddenを設定している
   color: #3C2A10;
 }
 
-.l-main__single-page-contents p {
+.l-main__single-page-contents > p {
   font-size: 1.6rem;
   margin-bottom: 5%;
 }
@@ -304,6 +304,20 @@ bodyにoverflow:hiddenを設定している
 
 .l-main__single-page-contents .c-blockquote {
   margin-bottom: 5%;
+}
+
+.l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
+  margin-left: 10%;
+}
+
+.l-main__single-page-contents ul:nth-of-type(3) {
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 375px) {
+  .l-main__single-page-contents ul:nth-of-type(2), .l-main__single-page-contents ul:nth-of-type(5) {
+    margin-left: 5%;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -380,6 +394,21 @@ bodyにoverflow:hiddenを設定している
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .c-grid-img {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .c-grid-img {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .c-card-button {
@@ -420,8 +449,14 @@ bodyにoverflow:hiddenを設定している
 }
 
 .c-blockquote {
+  font-size: 1.6rem;
   background-color: #F5F5F5;
   padding: 5%;
+}
+
+.c-blockquote p {
+  font-size: 1.6rem;
+  margin-bottom: 10%;
 }
 
 .c-pagenation {
@@ -624,8 +659,64 @@ bodyにoverflow:hiddenを設定している
   outline: none;
 }
 
+.c-code {
+  background-color: #F5F5F5;
+  margin-bottom: 5%;
+}
+
+.c-code code {
+  font-size: 1.6rem;
+}
+
+.c-table {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.c-table tr > td {
+  border: solid 1px #707070;
+  font-size: 1.6rem;
+  padding: 5%;
+}
+
+.c-table tr > :nth-child(1) {
+  width: 30%;
+}
+
+.c-table tr > :nth-child(2) {
+  width: 70%;
+}
+
 .c-sub-title {
   color: white;
+}
+
+.c-single-page-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.c-single-page-card__img {
+  width: 45%;
+}
+
+.c-single-page-card__description {
+  width: 50%;
+}
+
+.c-single-page-card__description p {
+  font-size: 1.6rem;
+}
+
+.c-single-page-card--right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
 }
 
 .c-map {
@@ -674,6 +765,22 @@ bodyにoverflow:hiddenを設定している
 @media screen and (max-width: 834px) {
   .c-map__explanation {
     width: 100%;
+  }
+}
+
+.c-list {
+  list-style: none;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.c-list li {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 375px) {
+  .c-list {
+    margin-left: 0;
   }
 }
 
@@ -789,5 +896,38 @@ bodyにoverflow:hiddenを設定している
 
 .p-main-visual--single-page .c-sub-title {
   font-size: 4rem;
+}
+
+.u-img-height50rem {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  height: 50rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 834px) {
+  .u-img-height50rem {
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .u-img-height50rem {
+    height: 15rem;
+  }
+}
+
+.u-size-581x358 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 581px;
+}
+
+.u-img-center {
+  margin-bottom: 5%;
+  text-align: center;
+  padding: 5%;
 }
 /*# sourceMappingURL=style.css.map */
