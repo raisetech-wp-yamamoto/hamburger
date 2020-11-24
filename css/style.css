@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
+  font-family: 'mplus-1m-regular','M+ C Type-1 (basic latin) Regular', 'M+ Type-1 (general-j) Regular', sans-serif;
 }
 
 body button:focus {
@@ -388,6 +388,25 @@ bodyにoverflow:hiddenを設定している
   }
 }
 
+.c-button {
+  cursor: pointer;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 5%;
+  background-color: #F2EDE9;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+@media screen and (max-width: 375px) {
+  .c-button {
+    display: block;
+    margin: 0 auto 5%;
+  }
+}
+
 .c-grid-img {
   display: -ms-grid;
   display: grid;
@@ -413,6 +432,7 @@ bodyにoverflow:hiddenを設定している
 
 .c-card-button {
   display: block;
+  cursor: pointer;
   background-color: white;
   color: #707070;
   border-radius: 40px;
@@ -895,6 +915,17 @@ bodyにoverflow:hiddenを設定している
 }
 
 .p-main-visual--single-page .c-sub-title {
+  font-size: 4rem;
+}
+
+.p-main-visual--about-page {
+  padding: 15% 0;
+  background-image: url(../image/black-steel-lamp-post-1070945.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.p-main-visual--about-page .c-sub-title {
   font-size: 4rem;
 }
 
