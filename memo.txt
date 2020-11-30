@@ -142,3 +142,31 @@ buttonとかのStyleが、bodyに設定したCSSより優先して上書きさ�
     margin: auto;
     padding: 10%;
 }
+
+
+
+・WP化
+フッターのショップ情報とヒストリーからのリンク、↓でやってみたが
+クリックすると404エラー。
+<footer class="l-footer">
+	<div class="l-footer__sitemap">
+		<a href="<?php get_template_directory_uri(); ?>/about.php">ショップ情報</a>
+		|
+		<a href="<?php get_template_directory_uri(); ?>/archive.php">ヒストリー</a>
+	</div>
+	<small>Copyright: RaiseTech</small>
+	<?php wp_footer(); ?>
+</footer>
+
+
+・       line-height: 70px;//まったく同じ高さにしてしまうとずれたので少し小さくした
+        @include mq(md){
+            line-height: 37.5px;//まったく同じ高さにしてしまうとずれたので少し小さくした
+
+
+・詳しく見るボタンは続きがある場合に表示させる？
+↓のコードだと続きがある場合にしかボタンが表示されなくなってしまう
+<p><?php the_content( '<button class="c-card-button" >詳しく見る</button>' ); ?></p>
+
+・Search.phpの件数が5件で、archive.phpの件数が3件なのは
+　たまたまなのかそういう風にしなきゃいけないのかどっちなんでしょ？？
